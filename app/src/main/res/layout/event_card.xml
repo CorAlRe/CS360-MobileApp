@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@color/design_default_color_primary"
+            android:contentDescription="@string/item_content_desc"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/eventName"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/eventImage"
+            android:maxLines="1"
+            android:text="@string/item_name_placeholder"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/eventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/eventImage"
+            android:layout_below="@id/eventName"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="Date"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/eventTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/eventDate"
+            android:layout_below="@id/eventName"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="10dp"
+            android:text="Time"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/eventLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/eventImage"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@id/eventDate"
+            android:text="Location"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:gravity="center_vertical"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
